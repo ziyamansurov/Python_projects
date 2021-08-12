@@ -38,9 +38,9 @@ def qiymet_yazan():
     if not ad.isalpha() and not soyad.isalpha():
         raise Exception("Yalniz heriflerden ibaret olmalidir")
     else:
-        qiy1 = input("1-ci qiymetiniziz yazin: ")
-        qiy2 =input("2-ci qiymetiniziz yazin: ")
-        qiy3 = input("3-cu qiymetiniziz yazin: ")
+        qiy1 = input("1-ci qiymetinizi yazin: ")
+        qiy2 =input("2-ci qiymetinizi yazin: ")
+        qiy3 = input("3-cu qiymetinizi yazin: ")
         ortalama = (int(qiy1) + int(qiy2) + int(qiy3)) / 3
         print(ortalama)
         if ortalama<=100:
@@ -58,6 +58,8 @@ def qiymet_saveeden():
         with open('neticeler.txt','w',encoding='utf-8') as file1:
             for i in saver:
                 file1.write(i+'\n')
+    print("Qiymetler yadda saxlanildi")
+        
 
 def createPSW():
 
@@ -98,7 +100,7 @@ if checkpasswrd(input("admin kodunuzu yazin: ")):
                       'qiymetleri silmek ucun 4\n'
                       'neticeleri silmek ucun 5\n'
 
-                      'cixmaq uxun 6\n')
+                      'cixmaq ucun 6\n')
 
         if sorgu == '1':
             qiymet_gosderen()
